@@ -1,0 +1,35 @@
+autoload -U +X bashcompinit && bashcompinit
+
+autoload -U promptinit && promptinit
+autoload -U colors && colors
+
+# Word styles.
+autoload -U select-word-style
+select-word-style bash
+
+# Minimal color prompt.
+PROMPT_COLOR=cyan
+PS1="%{${fg[cyan]}%}%B%n@%m] %b%{${fg[default]}%}"
+RPROMPT="%{${fg[$PROMPT_COLOR]}%}%B%(7~,.../,)%6~%b%{${fg[default]}%}"
+
+# History configuration.
+export HISTSIZE=1000000
+export SAVEHIST=1000000
+export HISTFILE=~/.history
+setopt append_history
+setopt extended_history
+setopt hist_ignore_dups
+
+# Set up colors.
+eval $(dircolors -b)
+
+# Setting up interactive comments.
+setopt INTERACTIVECOMMENTS
+
+# Map Caps Lock to ctrl
+setxkbmap -layout us -option ctrl:nocaps
+
+# Aliases
+alias ll='ls -l'
+alias ls='ls --color=auto'
+alias docker="sudo docker"
