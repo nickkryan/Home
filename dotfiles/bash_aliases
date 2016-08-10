@@ -1,0 +1,6 @@
+#Research Servers
+alias jack='ssh jack.gtisc.gatech.edu'
+alias liz='ssh liz.gtisc.gatech.edu'
+
+#Git
+alias gs='git status'

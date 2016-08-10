@@ -26,10 +26,16 @@ eval $(dircolors -b)
 # Setting up interactive comments.
 setopt INTERACTIVECOMMENTS
 
+# Dvorak
+setxkbmap dvorak
+
 # Map Caps Lock to ctrl
-setxkbmap -layout us -option ctrl:nocaps
+setxkbmap -option ctrl:nocaps
 
 # Aliases
 alias ll='ls -l'
 alias ls='ls --color=auto'
 alias docker="sudo docker"
+alias asdf="setxkbmap dvorak"
+alias aoeu="setxkbmap dvorak"
+source /opt/ros/kinetic/setup.bash
