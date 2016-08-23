@@ -7,3 +7,6 @@ alias gs='git status'
 
 #EC2
 alias ec2='ssh -i ~/.ssh/nick_samsung.pem ec2-user@ec2-52-43-152-245.us-west-2.compute.amazonaws.com'
+
+#LS
+alias ls='ls --color=auto'

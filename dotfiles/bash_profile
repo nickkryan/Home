@@ -2,4 +2,8 @@
 source /opt/ros/kinetic/setup.bash
 export PS1='\[\e]0;\w\a\]\n\[\e[32m\]\u@: \[\e[33m\]\w\[\e[0m\]\n\!\$ '
 
+LS_COLORS=$LS_COLORS:'di=1;37'
+export LS_COLORS
+
+
 setxkbmap -option caps:ctrl_modifier
