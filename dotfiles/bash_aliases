@@ -12,3 +12,7 @@ alias ec2='ssh -i ~/.ssh/nick_samsung.pem ec2-user@ec2-52-43-152-245.us-west-2.c
 alias l='ls --color=auto'
 alias ls='ls --color=auto'
 alias la='ls -a'
+
+#Dvorak-QWERY
+alias aoeu='setxkbmap us'
+alias asdf='setxkbmap dvorak'
