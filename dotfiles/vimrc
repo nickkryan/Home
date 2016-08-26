@@ -62,3 +62,9 @@ set nohidden
 " Setting smart case sensitivity for searching.
 set ignorecase
 set smartcase
+
+" Java indents
+set autoindent
+set si
+set shiftwidth=4
+
