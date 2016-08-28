@@ -43,6 +43,13 @@ if [ -n "$(command -v apt-get)" ]; then
     sudo apt-get install -y tmux
 fi
 
+if [[-n "$(command -v pacman)" ]]; then
+	# General utilities
+	sudo pacman -S --no-confirm vim
+	sudo pacman -S --no-confirm tmux
+    sudo pacman -S --no-confirm htop
+    sudo pacman -S --no-confirm jq
+fi
 ###########################
 # Vim Plugin Installation #
 ###########################
@@ -61,3 +68,11 @@ vim +PluginInstall +qall
 git config --global core.editor vim
 git config --global user.email "nickkryan77@gmail.com"
 git config --global user.name "nickkryan"
+
+#Oh-My-Zsh
+curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+
+#Powerline Fonts
+cd ~ && mkdir Themes && cd Themes
+git clone https://github.com/powerline/fonts.git
+./install.sh
