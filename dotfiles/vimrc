@@ -19,6 +19,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'kshenoy/vim-signature'
 Plugin 'SearchAlternatives'
 Plugin 'ingo-library'
+Plugin 'Raimondi/delimitMate'
 " End Plugins
 
 call vundle#end()
@@ -33,6 +34,7 @@ set undoreload=10000
 
 " Line Wrapping
 set nowrap
+set colorcolumn=80
 
 " Line Numbering
 set number
@@ -55,7 +57,7 @@ set paste
 
 " Coloring.
 colorscheme desert
-
+highlight ColorColumn ctermbg=gray
 " Cleanup
 set nohidden
 
