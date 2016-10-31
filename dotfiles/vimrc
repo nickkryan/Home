@@ -34,14 +34,14 @@ set undoreload=10000
 
 " Line Wrapping
 set nowrap
-set colorcolumn=80
+set colorcolumn=81
 
 " Line Numbering
 set number
 
 " Whitespace Management
+set softtabstop=4
 set expandtab
-set tabstop=4
 
 " Syntax Highlighting
 filetype on
@@ -58,6 +58,7 @@ set paste
 " Coloring.
 colorscheme desert
 highlight ColorColumn ctermbg=gray
+
 " Cleanup
 set nohidden
 
@@ -68,5 +69,4 @@ set smartcase
 " Java indents
 set autoindent
 set si
-set shiftwidth=4
 
