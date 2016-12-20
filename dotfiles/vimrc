@@ -20,6 +20,7 @@ Plugin 'kshenoy/vim-signature'
 Plugin 'SearchAlternatives'
 Plugin 'ingo-library'
 Plugin 'Raimondi/delimitMate'
+Plugin 'morhetz/gruvbox'
 " End Plugins
 
 call vundle#end()
@@ -40,8 +41,14 @@ set colorcolumn=81
 set number
 
 " Whitespace Management
+set tabstop=4
 set softtabstop=4
 set expandtab
+set backspace=indent,eol,start
+
+" Java indents
+set autoindent
+set smartindent
 
 " Syntax Highlighting
 filetype on
@@ -66,7 +73,14 @@ set nohidden
 set ignorecase
 set smartcase
 
-" Java indents
-set autoindent
-set si
+" DelimiteMate
+let delimitMateAutoClose = 1
+let delimitMate_expand_cr = 1
 
+" Coloring
+set background=dark
+hi CursorLine cterm=bold ctermbg=234
+colorscheme gruvbox
+let g:gruxbox_contrast_dark= 'hard'
+let g:gruvbox_number_columnt = 'bg4'
+let g:gruvbox_improved_warnings = 1

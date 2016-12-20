@@ -23,6 +23,26 @@ for dotfile in $(find "dotfiles/" -type f); do
     ln -s $(readlink -f "$dotfile") ~/$name
 done
 
+#nvim
+mkdir -p ~/.config/nvim
+if [ -f ~/.config/nvim/init.vim ]; then
+	mv ~/.config/nvim/init.vim ~/.config/nvim/init.vim.old
+fi
+rm ~/.config/nvim/init.vim
+ln -s $(readlink -f "init.vim") ~/.config/nvim
+
+mkdir -p ~/.config/i3
+for dotfile in $(find "i3/" -type f); do
+	name=.$(basename "$dotfile")
+
+	if [ -f ~/.config/i3/$name ]; then
+		mv ~/.config/i3/$name ~/.config/i3/$name.old
+	fi
+
+	rm -f ~/.config/i3/$name
+
+	ln -s $(readlink -f "$dotfile") ~/.config/i3/$name
+done
 #########################
 # Software Installation #
 #########################
@@ -65,7 +85,7 @@ vim +PluginInstall +qall
 # Apparently git defaults to using 'vi' instead of 'vim', causing some
 # unpleasant warnings when writing commit messages. Let's use 'vim'
 # instead.
-git config --global core.editor vim
+git config --global core.editor nvim
 git config --global user.email "nickkryan77@gmail.com"
 git config --global user.name "nickkryan"
 
