@@ -55,11 +55,47 @@
 	grafted = 1 normal italic
 	HEAD = 14 normal dim
 [diff]
+	algorithm = histogram
 	colorMoved = zebra
+	mnemonicPrefix = true
+	renames = true
 [user]
 	email = nickkryan77@gmail.com
 	name = Nick
 [core]
 	editor = nvim
+        fsmonitor = true
+        untrackedCache = true
+        excludesfile = ~/.gitignore
+[push]
+	default = simple
+	autoSetupRemote = true
+	followTags = true
 [pull]
 	rebase = true
+[column]
+	ui = auto
+[branch]
+	sort = -committerdate
+[tag]
+	sort = version:refname
+[init]
+	defaultBranch = mainline
+[fetch]
+        prune = true
+        pruneTags = true
+        all = true
+
+[help]
+        autocorrect = prompt
+[commit]
+        verbose = true
+[rerere]
+        enabled = true
+        autoupdate = true
+[rebase]
+        autoSquash = true
+        autoStash = true
+        updateRefs = true
+[merge]
+       conflictstyle = zdiff3

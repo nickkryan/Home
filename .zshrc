@@ -19,6 +19,7 @@ SAVEHIST=1000
 setopt extendedglob
 setopt auto_cd
 bindkey -v
+bindkey '^R' history-incremental-pattern-search-backward
 
 fpath=(~/.zsh/completion $fpath)
 autoload -Uz compinit && compinit -i
@@ -109,3 +110,6 @@ push_mwinit_cookie() {
   scp ~/.midway/cookie dev-dsk-nkryan-2c-293d080d.us-west-2.amazon.com:~/.midway/cookie
 }
 
+path+=('/home/nick/maelstrom');
+export path
+export DISPLAY="$(hostname).local:0.0"
