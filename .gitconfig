@@ -64,7 +64,6 @@
 	name = Nick
 [core]
 	editor = nvim
-        fsmonitor = true
         untrackedCache = true
         excludesfile = ~/.gitignore
 [push]
